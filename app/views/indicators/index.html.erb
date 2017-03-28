@@ -1,0 +1,29 @@
+<h2>Indicators</h2>
+<table style="border-collapse: collapse" border="1">
+  <thead>
+  <tr>
+    <th>名称</th>
+    <th>描述</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @indicators.each do |indicator| %>
+  <tr>
+  <td>
+    <%= indicator.name %>
+  </td>
+  <td>
+    <%= indicator.interpretation %>
+  </td>
+  <td>
+    <%= form_for :indicator do |f| %>
+        <%= link_to "复制", indicators_path %>
+        <%= link_to "删除", edit_indicators_path%>
+
+    <% end %>
+  </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

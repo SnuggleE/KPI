@@ -1,0 +1,15 @@
+.content{
+    width: calc(100% - 310px);
+    float: left;
+    min-height: 600px;
+    box-shadow: 15px 5px 10px -10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 10px 5px;
+}
+.features{
+    box-sizing: border-box;
+    float: right;
+    width: 310px;
+    height: 100%;
+    padding: 30px;
+}
