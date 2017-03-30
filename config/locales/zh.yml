@@ -1,4 +1,13 @@
-# English strings go here for Rails i18n
+# Chinese strings go here for Rails i18n
 zh:
-  # my_label: "My label"
   permission_view_indicators: "浏览indicator"
+  'Actual_values_input_type': "实际值输入类型"
+  Salary_analytics: "薪水分析"
+  Salary_report: "薪水报告"
+  Performance_indicator: "表现指标"
+  KPI_patterns: "kpi模式"
+  Calculation_periods: "计算周期"
+  Through_indicators: "通过指标"
+  Surcharges: "附加"
+  Effectiveness_shift_report: "效益转化报告"
+  Unmotivated_employees: "无绩效员工"

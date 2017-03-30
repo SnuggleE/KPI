@@ -1,0 +1,83 @@
+<div class="indicator-gener-left indicator-gener">
+  <%= form_for :indicator, url: indicators_path do |f| %>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :"Indicator name" %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.text_field :name %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Actual values input type' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.select(:inputtype) do %>
+              <% [['Direct input', 0], ['Exact values from the interpretation matrix', 1]].each do |c| -%>
+                  <%= content_tag(:option, c.first, value: c.last) %>
+              <% end %>
+          <% end %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Category' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.select(:category) do %>
+              <% [['Common indicator', 0]].each do |c| -%>
+                  <%= content_tag(:option, c.first, value: c.last) %>
+              <% end %>
+          <% end %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Indicator unit of measurement ' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.select(:unit) do %>
+              <% [['Hours', 0], ['Days', 1], ['Yuan', 2]].each do |c| -%>
+                  <%= content_tag(:option, c.first, value: c.last) %>
+              <% end %>
+          <% end %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Marks per period' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.select(:marksperperiod) do %>
+              <% [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]].each do |c| -%>
+                  <%= content_tag(:option, c.first, value: c.last) %>
+              <% end %>
+          <% end %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Objective indicator' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.check_box :isobjective %>
+        </p>
+      </div>
+      <div class="input-item">
+        <p class="indicator-label"><%= f.label :'Interpretation' %>
+          <span class="required">*</span>
+        </p>
+        <p class="indicator-input">
+          <%= f.text_area :interpretation %>
+        </p>
+      </div>
+
+      <div class="input-item">
+        <%= f.submit 'Create' %>
+      </div>
+  <% end %>
+</div>
+<div class="indicator-gener-right indicator-gener"></div>
+
+

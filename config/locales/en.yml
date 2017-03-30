@@ -1,3 +1,14 @@
 # English strings go here for Rails i18n
 en:
   # my_label: "My label"
+  permission_view_indicators: "permission view indicators"
+  'Actual_values_input_type': "Actual values input type"
+  Salary_analytics: "Salary analytics"
+  Salary_report: "Salary report"
+  Performance_indicator: "Performance indicator"
+  KPI_patterns: "KPI patterns"
+  Calculation_periods: "Calculation periods"
+  Through_indicators: "Through indicators"
+  Surcharges: "Surcharges"
+  Effectiveness_shift_report: "Effectiveness shift report"
+  Unmotivated_employees: "Unmotivated employees"

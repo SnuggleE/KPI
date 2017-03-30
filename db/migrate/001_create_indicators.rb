@@ -8,6 +8,16 @@ class CreateIndicators < ActiveRecord::Migration
 
       t.string :interpretation
 
+      t.string :inputtype
+
+      t.string :category
+
+      t.string :unit
+
+      t.integer :marksperperiod
+
+      t.boolean :isobjective
+
 
     end
 

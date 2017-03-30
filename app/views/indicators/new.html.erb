@@ -1,2 +1,15 @@
-<h2>Indicators#new</h2>
+<div class="content">
+  <h2>Add new performance indicator</h2>
+  <div>
+    <%= render 'shared/form' %>
+  </div>
+</div>
+<div class="features">
+  <%= render 'shared/features' %>
+</div>
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'basic', :plugin => 'kpi' %>
+    <%= stylesheet_link_tag 'indicator_create', :plugin => 'kpi' %>
+<% end %>
+
 

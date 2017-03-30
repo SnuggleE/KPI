@@ -1,11 +1,17 @@
-<h2>Indicators#show</h2>
-<div class="content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dicta dolor hic mollitia repudiandae? Amet, assumenda aut dicta dignissimos ea et, fuga illo labore, nulla officia quam sed similique voluptatibus.
 
-</div>
-<div class="features">
-  <%= render 'indicators/features' %>
+<div class="show">
+  <div class="content">
+    <h2>Edit show</h2>
+    <%= render 'shared/form'  %>
+  </div>
+
+  <div class="features">
+    <%= render 'shared/features' %>
+  </div>
 </div>
 <% content_for :header_tags do %>
     <%= stylesheet_link_tag 'basic', :plugin => 'kpi' %>
+    <%= stylesheet_link_tag 'indicator_create', :plugin => 'kpi' %>
 <% end %>
+
+

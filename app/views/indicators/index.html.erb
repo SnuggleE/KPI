@@ -1,29 +1,42 @@
-<h2>Indicators</h2>
-<table style="border-collapse: collapse" border="1">
-  <thead>
-  <tr>
-    <th>名称</th>
-    <th>描述</th>
-    <th>操作</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @indicators.each do |indicator| %>
-  <tr>
-  <td>
-    <%= indicator.name %>
-  </td>
-  <td>
-    <%= indicator.interpretation %>
-  </td>
-  <td>
-    <%= form_for :indicator do |f| %>
-        <%= link_to "复制", indicators_path %>
-        <%= link_to "删除", edit_indicators_path%>
 
+<div class="content">
+  <div class="banner-tool">
+    <h2 class="left">Indicators</h2>
+    <div class="right">
+      <%= render 'tools'  %>
+    </div>
+  </div>
+  <table width="100%" style="border-collapse: collapse" border="1">
+    <thead>
+    <tr>
+      <th>名称</th>
+      <th>描述</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @indicators.each do |indicator| %>
+        <tr>
+          <td>
+            <%= link_to indicator.name, edit_indicator_path(indicator) %>
+          </td>
+          <td>
+            <%= indicator.interpretation %>
+          </td>
+          <td>
+                <%= link_to "复制", indicator_path(indicator) %>
+                <%= link_to "删除", indicator_path(indicator),
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' }%>
+          </td>
+        </tr>
     <% end %>
-  </td>
-  </tr>
-  <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
+<div class="features">
+  <%= render 'shared/features' %>
+</div>
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'basic', :plugin => 'kpi' %>
+<% end %>
